@@ -1,0 +1,147 @@
+/* Reset & base */
+* { box-sizing: border-box; }
+
+:root {
+  --bg: #f7f7f7;
+  --fg: #222;
+  --card: #fff;
+  --border: #e5e5e5;
+  --muted: #666;
+  --input: #fff;
+  --input-border: #ccc;
+  --accent: #6b8cff;
+  --accent-ink: #fff;
+  --danger: #d9534f;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Layout */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+h1 {
+  margin: 8px 0 16px;
+  font-size: 24px;
+}
+
+.page-nav .btn { text-decoration: none; }
+
+/* Card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+/* Fieldset & grid */
+fieldset {
+  margin: 0 0 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+legend {
+  padding: 0 6px;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 820px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* Form controls */
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+
+label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+input {
+  padding: 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  font-size: 14px;
+  background: var(--input);
+}
+
+input[readonly] {
+  background: #f2f3f5;
+  color: #555;
+  cursor: not-allowed;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(107, 140, 255, 0.15);
+}
+
+/* Actions & buttons */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid var(--input-border);
+  background: #fafafa;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--fg);
+}
+
+.btn:hover { filter: brightness(0.98); }
+
+.btn.primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn.danger {
+  border-color: var(--danger);
+  color: #fff;
+  background: var(--danger);
+}
+
+/* Small helper text (optional) */
+.note {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}

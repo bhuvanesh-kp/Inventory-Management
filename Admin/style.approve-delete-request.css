@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    margin: 0;
+    background: #f6f7f9;
+    color: #1f2937;
+}
+
+.container {
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.page-header .sub {
+    margin: 6px 0 12px;
+    color: #6b7280;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+    color: #111827;
+    text-decoration: none;
+}
+
+.btn.approve {
+    background: #10b981;
+    border-color: #10b981;
+    color: #fff;
+}
+
+.btn.reject {
+    background: #ef4444;
+    border-color: #ef4444;
+    color: #fff;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 14px;
+}
+
+.form {
+    display: grid;
+    gap: 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+textarea,
+input {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.h,
+.h2 {
+    margin: 0 0 8px;
+}
+
+.kv {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 8px 12px;
+}
+
+.kv dt {
+    font-weight: 600;
+    color: #374151;
+}
+
+.kv dd {
+    margin: 0;
+}
+
+.reason {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 54px;
+}
