@@ -13,7 +13,7 @@ include("database.php");
 
 <body>
   <main class="page">
-    <form class="form" action="working.php" method="post" autocomplete="on">
+    <form class="form" action="working.php" method="POST" autocomplete="on">
       <h1 class="title">Login</h1>
 
       <div class="field">

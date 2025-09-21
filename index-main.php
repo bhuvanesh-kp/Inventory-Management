@@ -10,7 +10,6 @@ $prod = mysqli_query($coni, $sql_user);
 
 $count_products = 0;
 
-
 if (mysqli_num_rows($prod) > 0) {
   while ($row = mysqli_fetch_assoc($prod)) {
     /* echo "<b> Record $count: <br> </b>" ;
@@ -46,14 +45,36 @@ mysqli_close($coni);
 <body>
   <header class="site-header">
     <div class="container">
-      <h1 class="brand">Inventory Manager</h1>
-      <nav class="nav">
+      <h1 class="brand">Inventory Manager, Welcome <?=$_SESSION["user"] ?></h1>
+      <!-- <nav class="nav">
         <a href="index.html">Home</a>
         <a href="./Products/add-product.php">Add</a>
         <a href="./Products/edit-product.php">Edit</a>
         <a href="./Products/delete-product.php">Delete</a>
         <a href="./Admin/admin-approval.php">Admin</a>
-      </nav>
+      </nav> -->
+      
+      <?php if ((int)$_SESSION["scope"] === 1): ?>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+        </nav>
+      <?php elseif ((int)$_SESSION["scope"] === 2): ?>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="./Products/add-product.php">Add</a>
+          <a href="./Products/edit-product.php">Edit</a>
+          <a href="./Products/delete-product.php">Delete</a>
+        </nav>
+      <?php elseif ((int)$_SESSION["scope"] === 3) : ?>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="./Admin/admin-approval.php">Admin</a>
+        </nav>
+      <?php else :?>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+        </nav>
+      <?php endif; ?>
     </div>
   </header>
 

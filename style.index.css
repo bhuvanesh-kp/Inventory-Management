@@ -121,23 +121,24 @@ select:focus {
     border-color: #6b8cff;
 }
 
-.actions {
-    display: flex;
-    gap: 8px;
-    align-items: end;
-}
 
 /* Buttons */
 .btn {
-    padding: 30px 50px 0px 0;
+    display: block;                  /* flex for centering text */
+    align-items: center;            /* vertical center */
+    justify-content: center;        /* horizontal center */
+    width: 100%;                    /* take full width of parent */
+    max-width: 250px;  
+    height: 100px;             /* optional: prevent over-stretch */
+    padding: 12px 16px;             /* balanced padding */
     border: 1px solid #ccc;
     background: #fafafa;
     border-radius: 6px;
     cursor: pointer;
-    text-decoration: none;
     color: #222;
-    font-size: 14px;
-    
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 auto;                 /* center inside parent */
 }
 
 .btn.primary {
@@ -147,7 +148,20 @@ select:focus {
 }
 
 .btn:hover {
-    filter: brightness(0.98);
+    background: #f0f0f0;
+    transform: translateY(-1px);
+}
+
+.btn.primary:hover {
+    background: #5a76e8;
+}
+
+/* Container for multiple buttons */
+.actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;    /* center all buttons in row */
+    flex-wrap: wrap;
 }
 
 /* Quick actions */
