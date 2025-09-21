@@ -7,8 +7,6 @@
     $table = "product";
     $coni = "";
 
-    $access_scope;
-
 
     try{
         $coni = mysqli_connect($server, $user, $pwd, $table);
