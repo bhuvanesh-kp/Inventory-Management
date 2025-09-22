@@ -181,16 +181,14 @@ select:focus {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Container for multiple buttons */
 .actions {
     display: flex;
     gap: 12px;
-    justify-content: center;    /* center all buttons in row */
+    justify-content: center;    
     flex-wrap: wrap;
     margin-top: 16px;
 }
 
-/* Quick actions */
 .quick {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -223,7 +221,7 @@ select:focus {
     background: #fcfcff;
 }
 
-/* Stats */
+
 .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -249,7 +247,7 @@ select:focus {
     margin-top: 4px;
 }
 
-/* Tables */
+
 .table-wrap {
     overflow-x: auto;
 }
