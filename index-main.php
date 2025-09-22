@@ -1,7 +1,7 @@
 <?php
 include("database.php");
 
-// query to fetch data from database
+
 $sql_fetch = "SELECT * FROM products";
 $result = mysqli_query($coni, $sql_fetch);
 
