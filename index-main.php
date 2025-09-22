@@ -79,10 +79,6 @@ mysqli_close($coni);
   </header>
 
   <main class="container">
-    <!-- Flash area (server can echo success/error messages here) -->
-    <!-- Example PHP: <?php if (!empty($flash)) echo '<p class="flash">' . $flash . '</p>'; ?> -->
-
-    <!-- Search / Read (GET so results are shareable). Backend can handle in index.php -->
     <section class="card">
       <h2>Find Products</h2>
       <form action="index.php" method="get" class="grid">
