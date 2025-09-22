@@ -70,6 +70,7 @@ $seller_id = 1345;
       <div class="actions">
         <button type="submit" class="btn primary">Add Product</button>
         <button type="reset" class="btn">Clear</button>
+        <a href="./../index-main.php" class="btn back">Back</a>
       </div>
     </form>
 

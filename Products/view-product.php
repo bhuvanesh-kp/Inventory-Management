@@ -92,7 +92,7 @@ $seller_id = $row["seller_id"];
 
       <!-- Form to edit and update details -->
        <section class="card">
-        <form class="product-form" action="#" method="post">
+        <form class="product-form" action="request_edit.php" method="POST">
           <fieldset>
             <legend>Edit Info</legend>
             <div class="grid">
@@ -103,12 +103,12 @@ $seller_id = $row["seller_id"];
 
               <div class="form-group">
                 <label for="prod_name">Product Name</label>
-                <input type="text" id="prod_name" name="prod_name" value="<?=$prod_name?>"/>
+                <input type="text" id="prod_name" name="prod_name" value="<?=$prod_name?>" required/>
               </div>
 
               <div class="form-group">
                 <label for="seller_id">Seller ID</label>
-                <input type="text" id="seller_id" name="seller_id" value="<?=$seller_id?>"/>
+                <input type="text" id="seller_id" name="seller_id" value="<?=$seller_id?>" required/>
               </div>
             </div>
           </fieldset>
@@ -118,12 +118,12 @@ $seller_id = $row["seller_id"];
             <div class="grid">
               <div class="form-group">
                 <label for="price">Price</label>
-                <input type="number" step="0.01" id="price" name="price" value="<?=$price?>"/>
+                <input type="number" step="0.01" id="price" name="price" value="<?=$price?>" required/>
               </div>
 
               <div class="form-group">
                 <label for="quantity">Quantity</label>
-                <input type="number" id="quantity" name="quantity" value="<?=$quantity?>" />
+                <input type="number" id="quantity" name="quantity" value="<?=$quantity?>" required />
               </div>
 
               <!-- <div class="form-group">
@@ -135,9 +135,9 @@ $seller_id = $row["seller_id"];
 
           <!-- Optional actions (links only; no JS) -->
           <div class="actions">
-            <a class="btn" href="edit-product.php?id=" id="editLink">Edit</a>
-            <a class="btn danger" href="delete-product.php?id=" id="deleteLink">Delete</a>
-          </div>
+          <button class="btn approve" type="submit" name="approve" value="<?= $id ?>">apply changes</button>
+          <button class="btn reject" type="submit" name="decision" value="reject">Reject</button>
+        </div>
 
           <!-- Tip: In PHP, echo the ID into the hrefs above, e.g. edit-product.php?id=<?php echo $id; ?> -->
         </form>

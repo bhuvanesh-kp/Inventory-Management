@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
+  
   <main class="container">
     <h1>Delete Product</h1>
 
@@ -33,6 +34,7 @@
       <div class="actions">
         <button type="submit" class="btn danger">Delete</button>
         <button type="reset" class="btn">Clear</button>
+        <a href="./../index-main.php" class="btn back">Back</a>
       </div>
     </form>
 

@@ -24,6 +24,8 @@ body {
 .site-header {
     background: #fff;
     border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
 }
 
 .site-header .container {

@@ -56,11 +56,11 @@ mysqli_close($coni);
       
       <?php if ((int)$_SESSION["scope"] === 1): ?>
         <nav class="nav">
-          <a href="index.html">Home</a>
+          <a href="index-main.php">Home</a>
         </nav>
       <?php elseif ((int)$_SESSION["scope"] === 2): ?>
         <nav class="nav">
-          <a href="index.html">Home</a>
+          <a href="index-main.php">Home</a>
           <a href="./Products/add-product.php">Add</a>
           <a href="./Products/edit-product.php">Edit</a>
           <a href="./Products/delete-product.php">Delete</a>
@@ -127,6 +127,7 @@ mysqli_close($coni);
     </section>
 
     <!-- Quick Actions -->
+     <?php if ((int)$_SESSION["scope"] === 2): ?>
     <section class="quick">
       <a class="qcard" href="/Product/add-product.html">
         <h3>Add Product</h3>
@@ -141,10 +142,11 @@ mysqli_close($coni);
         <p>Request removal with confirmation.</p>
       </a>
       <a class="qcard" href="/Admin/admin-requests.html">
-        <h3>Admin Approvals</h3>
+        <h3>Admin Response</h3>
         <p>Approve or reject pending changes.</p>
       </a>
     </section>
+     <?php endif; ?>
 
     <!-- Simple Stats (server should render values) -->
     <section class="stats">
@@ -207,10 +209,13 @@ mysqli_close($coni);
     </section>
 
     <!-- Recent Requests (server loop) -->
+     <?php if ((int)$_SESSION["scope"] !== 1): ?>
     <section class="card">
       <div class="card-head">
         <h2>Recent Change Requests</h2>
+        <?php if ((int)$_SESSION["scope"] === 3): ?>
         <a class="btn" href="/Admin/admin-requests.html">Open Admin</a>
+        <?php endif; ?>
       </div>
       <div class="table-wrap">
         <table class="table">
@@ -245,6 +250,7 @@ mysqli_close($coni);
         </table>
       </div>
     </section>
+    <?php endif; ?>
   </main>
 
   <footer class="site-footer">

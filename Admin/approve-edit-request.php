@@ -61,14 +61,11 @@ $found = true;
   <main class="container">
     <header class="page-header">
       <h1>Approve — Edit Request</h1>
-      <nav class="crumbs"><a href="list-create-requests.php" class="btn">← Back to Approvals</a></nav>
+      <nav class="crumbs"><a href="admin-approval.php" class="btn">← Back to Approvals</a></nav>
       <p class="sub">Fetch a pending <strong>update</strong> request, compare current vs proposed, then approve or reject.</p>
     </header>
 
-    <!-- Lookup form -->
-    <?php while ($r = mysqli_fetch_assoc($query)): ?>
-      <form action="edit.php" method="POST" class="card form lookup">
-        <div class="form-group">
+    <div class="form-group">
           <label for="req">Request ID</label>
           <input type="number" id="req" name="request_id" required value="<?= isset($_GET['request_id']) ? (int)$_GET['request_id'] : '' ?>" />
         </div>
@@ -76,6 +73,11 @@ $found = true;
           <button class="btn" type="submit">Fetch Request</button>
         </div>
         <p class="muted">Server loads both current product and proposed values.</p>
+
+    <!-- Lookup form -->
+    <?php while ($r = mysqli_fetch_assoc($query)): ?>
+      <form action="edit.php" method="POST" class="card form lookup">
+        
 
 
         <?php if ($err): ?>

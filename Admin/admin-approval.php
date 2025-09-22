@@ -32,10 +32,10 @@
         </nav>
 
 
-        <section class="hint">
+        <!-- <section class="hint">
             <p class="muted">Tip: When you convert these to PHP, fetch the request details by <code>request_id</code>
                 and render the forms below with real values.</p>
-        </section>
+        </section> -->
     </main>
 </body>
 

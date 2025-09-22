@@ -9,6 +9,46 @@ body {
     color: #222;
 }
 
+/* ===== Site Header ===== */
+.site-header {
+    background: #111827;
+    color: #fff;
+    border-bottom: 1px solid #0b1220;
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+}
+
+.brand {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav a {
+    color: #e5e7eb;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+}
+
+.nav a:hover {
+    background: #1f2937;
+    border-color: #374151;
+    color: #fff;
+}
+
 .container {
     max-width: 680px;
     margin: 40px auto;
@@ -97,6 +137,16 @@ textarea:focus {
 
 .btn:hover {
     filter: brightness(0.98);
+}
+
+.btn.back {
+    border-color: #94a3b8;
+    background: #e2e8f0;
+    color: #111827;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .req {
