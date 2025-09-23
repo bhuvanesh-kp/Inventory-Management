@@ -55,19 +55,12 @@ body {
     margin-bottom: 14px;
 }
 
-.form {
+/* .form {
     display: grid;
     gap: 14px;
-}
+} */
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-input,
-textarea {
+input {
     padding: 10px;
     border: 1px solid #d1d5db;
     border-radius: 8px;
@@ -90,11 +83,11 @@ textarea {
     gap: 8px 12px;
 }
 
-.kv dt {
+/* .kv dt {
     font-weight: 600;
     color: #374151;
 }
 
 .kv dd {
     margin: 0;
-}
+} */
